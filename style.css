@@ -1,3 +1,4 @@
+
 * {
     margin: 0;
     padding: 0;
@@ -6,13 +7,13 @@
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #141414; /* Cor escura estilo streaming */
+    background-color: #141414;
     color: #ffffff;
     line-height: 1.6;
 }
 
-/* Bloco 1: Estilização do Topo/Navbar */
 .navbar {
+    position: sticky;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -24,9 +25,159 @@ body {
 }
 
 .logo {
-    color: #e50914; /* Vermelho característico */
+    color: #e50914; 
     font-size: 1.8rem;
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 1px;
+}
+
+.navigation .nav-link {
+    color: #e5e5e5;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.navigation .nav-link:hover {
+    color: #e50914;
+}
+
+
+.featured-movie {
+    position: relative;
+    height: 70vh;
+    background-image: linear-gradient(to right, rgba(0,0,0,0.9) 30%, rgba(0,0,0,0.2)), 
+                      url('https://unsplash.com');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding: 0 4%;
+}
+
+.featured-info {
+    max-width: 600px;
+}
+
+.featured-title {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 15px;
+    line-height: 1.1;
+}
+
+.featured-synopsis {
+    font-size: 1.1rem;
+    color: #cccccc;
+    margin-bottom: 25px;
+}
+
+.featured-actions {
+    display: flex;
+    gap: 15px;
+}
+
+.btn {
+    padding: 12px 26px;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+}
+
+.btn-primary {
+    background-color: #e50914;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #b80710;
+}
+
+.btn-secondary {
+    background-color: rgba(109, 109, 110, 0.7);
+    color: white;
+}
+
+.btn-secondary:hover {
+    background-color: rgba(109, 109, 110, 0.4);
+}
+
+
+.catalog-section {
+    padding: 40px 4%;
+}
+
+.section-title {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+
+.catalog-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 25px;
+}
+
+
+.movie-card {
+    width: 400px;
+    background-color: #181818;
+    border-radius: 6px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+
+.movie-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.5);
+}
+
+.card-cover {
+    width: 100%;
+    height: 320px;
+    overflow: hidden;
+}
+
+.card-cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-details {
+    padding: 15px;
+}
+
+.card-title {
+    font-size: 1.05rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.card-rating {
+    font-size: 0.9rem;
+    color: #ffb600;
+    font-weight: bold;
+} 
+
+.i {
+    width: 780px;
+    height: 300px;
 }
