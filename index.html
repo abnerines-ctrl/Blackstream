@@ -8,10 +8,6 @@
 </head>
 <body>
 
-    <div id="filmes"></div>
-
-    <script src="app.js"></script>
-
     <header class="navbar">
         <div class="logo">Blackstream</div>
         <nav class="navigation">
@@ -27,26 +23,39 @@
             <div class="featured-overlay">
                 <div class="featured-info">
                     <h1 class="featured-title">Interestelar</h1>
-                    <img class="i" src="Interestellar.png" alt="Capa do Filme 1">
                     <p class="featured-synopsis">
                         As reservas naturais da Terra estão se esgotando e um grupo de astronautas recebe a missão de verificar possíveis planetas para receberem a população mundial, possibilitando a continuação da espécie humana.
                     </p>
                     <div class="featured-actions">
                         <button class="btn btn-primary">Assistir Agora</button>
-                        <button class="btn btn-secondary">Mais Informações</button>
+                        <button class="btn btn-secondary" id="abrir-formulario">Adicionar Filme</button>
                     </div>
                 </div>
             </div>
         </section>
 
+        <section class="form-section">
+            <form id="form-filme" hidden>
+                <h3>Cadastrar Novo Filme</h3>
+                <div class="input-group">
+                    <label for="titulo">Título:</label>
+                    <input type="text" id="titulo" name="titulo" required>
+                </div>
+                <div class="input-group">
+                    <label for="capa">URL da Capa:</label>
+                    <input type="url" id="capa" name="capa" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Salvar Filme</button>
+            </form>
+        </section>
+
         <section class="catalog-section">
             <h2 class="section-title">Filmes do Catálogo</h2>
-            
-            <div class="catalog-container">
-                
+            <div class="catalog-container" id="filmes">
+
                 <div class="movie-card">
                     <div class="card-cover">
-                        <img src="Interestellar.png" alt="Capa do Filme 1">
+                        <img src="Interestellar.png" alt="A Origem">
                     </div>
                     <div class="card-details">
                         <h3 class="card-title">A Origem</h3>
@@ -56,7 +65,7 @@
 
                 <div class="movie-card">
                     <div class="card-cover">
-                        <img src="The_Dark_Knight.jpg" alt="Capa do Filme 2">
+                        <img src="The_Dark_Knight.jpg" alt="Batman">
                     </div>
                     <div class="card-details">
                         <h3 class="card-title">Batman: O Cavaleiro das Trevas</h3>
@@ -66,7 +75,7 @@
 
                 <div class="movie-card">
                     <div class="card-cover">
-                        <img src="images (2).jpg" alt="Capa do Filme 3">
+                        <img src="images (2).jpg" alt="Duna">
                     </div>
                     <div class="card-details">
                         <h3 class="card-title">Duna</h3>
@@ -76,7 +85,7 @@
 
                 <div class="movie-card">
                     <div class="card-cover">
-                        <img src="images (3).jpg" alt="Capa do Filme 4">
+                        <img src="images (3).jpg" alt="Blade Runner 2049">
                     </div>
                     <div class="card-details">
                         <h3 class="card-title">Blade Runner 2049</h3>
@@ -88,18 +97,6 @@
         </section>
     </main>
 
-<button id="abrir-formulario" type="button">+</button>
-
-    <form id="form-filme" hidden>
-        <p>
-            <label for="titulo">Título:</label>
-            <input id="titulo" name="titulo" required>
-        </p>
-        <p>
-            <label for="capa">URL da capa:</label>
-            <input id="capa" name="capa" type="url" required>
-        </p>
-        <button type="submit">Adicionar filme</button>
-    </form>
+    <script src="script.js"></script>
 </body>
 </html>
